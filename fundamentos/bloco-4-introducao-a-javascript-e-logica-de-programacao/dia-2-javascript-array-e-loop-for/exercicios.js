@@ -10,7 +10,14 @@ console.log(menuServices);
 
 //2.
 
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOfPortfolio = indexOf('Portfólio')
+let menu2 = ['Home', 'Serviços', 'Portfólio', 'Links'];
+let indexOfPortfolio = menu2.indexOf('Serviços')
 
 console.log(indexOfPortfolio);
+
+//3.
+
+let menu3 = ['Home', 'Serviços', 'Portfólio', 'Links'];
+menu3.push('Contato')
+
+console.log(menu3);
