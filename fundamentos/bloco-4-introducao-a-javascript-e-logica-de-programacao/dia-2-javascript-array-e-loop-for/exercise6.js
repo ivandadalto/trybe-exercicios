@@ -9,10 +9,9 @@ for(let i = 0;i < numbers.length; i += 1){
   }
 }
 
-if(oddNumbers === 0){
-  console.log("Não numeros Impares")
-}
-else{
+if(oddNumbers !== 0){
   console.log(oddNumbers)
 }
-  
+else{
+  console.log("Não há numeros Impares")
+}
