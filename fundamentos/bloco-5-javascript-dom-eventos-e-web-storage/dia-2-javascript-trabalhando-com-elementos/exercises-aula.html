@@ -2,7 +2,9 @@
   <section id="pai">
     <section id="primeiroFilho"></section>
     <section id="elementoOndeVoceEsta">
-      <section id="primeiroFilhoDoFilho"></section>
+      <section id="primeiroFilhoDoFilho">
+      <!----> <section> filhoPrimeiroFilhoDoFilho <section> -->
+      </section>
       <section id="segundoEUltimoFilhoDoFilho"></section>
     </section>
     Atenção!
@@ -10,6 +12,7 @@
     <section id="quartoEUltimoFilho"></section>
   </section>
   <script>
+    // PARTE I - BUSCANDO ELEMENTOS
     // 1 Acesse o elemento elementoOndeVoceEsta.
     const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
     // 2 Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
@@ -29,5 +32,23 @@
     // 8  Agora acesse o terceiroFilho a partir de pai.
     const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
 
-  </script>
+    // PARTE II - CRIANDO ELEMENTOS
+    // 1 Crie um irmão para elementoOndeVoceEsta.
+    const irmaoElementoOndeVoceEsta = document.createElement('section');
+    irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+    pai.appendChild(irmaoElementoOndeVoceEsta);
+    // 2 Crie um filho para elementoOndeVoceEsta.
+    const filhoElementoOndeVoceEsta = document.createElement('section');
+    filhoElementoOndeVoceEsta.id = "filhoElementoOndeVoceEsta";
+    elementoOndeVoceEsta.appendChil(filhoElementoOndeVoceEsta);
+    // 3 Crie um filho para primeiroFilhoDoFilho.
+    const filhoPrimeiroFilhoDoFilho = document.createElement('section');
+    filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
+    primeiroFilho.appendChild(filhoPrimeiroFilhoDoFilho);
+    // 4 A partir desse filho criado, acesse terceiroFilho.
+    let acessTerceiroFilho = filhoPrimeiroFilhoDoFilho
+    .parentElement // primeiroFilhoDoFilho
+    .parentElement // elementoOndeVoceEsta
+    .nextElementSibling; // terceiroFilho
+    </script>
 </main>
