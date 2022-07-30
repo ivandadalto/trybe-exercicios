@@ -57,13 +57,20 @@
   </head>
   <body>
     <script>
+      // EX 1 :
       const body = document.getElementsByTagName('body')[0];
       const title = document.createElement('h1');
       title.innerText = 'Exercício 5.2 - JavaScript DOM';
       body.appendChild(title);
+      // EX 2 :
       const main = document.createElement('main');
       body.appendChild(main);
-      main.className = "main-content"
+      main.className = 'main-content';
+      // EX 3 :
+      const pegandoMain = document.getElementsByClassName('main-content')[0];
+      const section = document.createElement('section');
+      section.className = 'center-content';
+      pegandoMain.appendChild(section);
 
     </script>
   </body>
