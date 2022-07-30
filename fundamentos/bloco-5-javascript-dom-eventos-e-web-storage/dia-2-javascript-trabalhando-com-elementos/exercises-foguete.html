@@ -84,7 +84,12 @@
       const thirdSection = document.createElement('section');
       thirdSection.className = 'right-content';
       pegandoMain.appendChild(thirdSection);
-
+      // EX 7:
+      const pegandoSecondSection = document.getElementsByClassName('left-content')[0];
+      const img = document.createElement('img');
+      img.className = 'small-image';
+      img.src = 'https://picsum.photos/200';
+      pegandoSecondSection.appendChild(img);
     </script>
   </body>
 </html>
