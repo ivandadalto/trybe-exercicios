@@ -108,10 +108,14 @@
         pegandoMain.appendChild(h3);
       }
       // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
-      // 1 :
+      // 1 Adicione a classe title na tag h1 criada:
         const pegandoTitle = document.querySelector('h1');
         pegandoTitle.className = 'title';
-
+      // 2 Adicione a classe description nas 3 tags h3 criadas:
+        const pegandoH3 = document.getElementsByTagName('h3');
+        for (let i2 = 0; i2 < 3; i2 += 1) {
+          pegandoH3[i2].className = 'description';
+        }
     </script>
   </body>
 </html>
