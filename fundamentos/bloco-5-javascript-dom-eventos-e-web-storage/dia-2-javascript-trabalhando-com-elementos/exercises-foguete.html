@@ -90,6 +90,17 @@
       img.className = 'small-image';
       img.src = 'https://picsum.photos/200';
       pegandoSecondSection.appendChild(img);
+      // EX 8:
+      const UnordenedList = document.createElement('ul');
+      const pegandoThirdSection = document.querySelector('.right-content');
+      pegandoThirdSection.appendChild(UnordenedList);
+      const array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (let number in array) {
+        const li = document.createElement('li');
+        li.innerHTML = array[number];
+        UnordenedList.appendChild(li);
+      }
+
     </script>
   </body>
 </html>
