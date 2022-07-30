@@ -116,6 +116,10 @@
         for (let i2 = 0; i2 < 3; i2 += 1) {
           pegandoH3[i2].className = 'description';
         }
+      // 3 Remova a section criado no passo 5 (aquele que possui a classe left-content). 
+      // Utilize a função .removeChild();
+        const removingSection = document.getElementsByClassName('left-content')[0];
+        pegandoMain.removeChild(removingSection);
     </script>
   </body>
 </html>
