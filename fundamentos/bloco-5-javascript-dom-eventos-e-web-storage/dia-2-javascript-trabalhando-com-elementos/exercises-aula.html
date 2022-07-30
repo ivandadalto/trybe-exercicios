@@ -1,16 +1,24 @@
-<main id="paiDoPai">
-  <section id="pai">
-    <section id="primeiroFilho"></section>
-    <section id="elementoOndeVoceEsta">
-      <section id="primeiroFilhoDoFilho">
-      <!----> <section> filhoPrimeiroFilhoDoFilho <section> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
       </section>
-      <section id="segundoEUltimoFilhoDoFilho"></section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
     </section>
-    Atenção!
-    <section id="terceiroFilho"></section>
-    <section id="quartoEUltimoFilho"></section>
-  </section>
+  </main>
   <script>
     // PARTE I - BUSCANDO ELEMENTOS
     // 1 Acesse o elemento elementoOndeVoceEsta.
@@ -50,5 +58,18 @@
     .parentElement // primeiroFilhoDoFilho
     .parentElement // elementoOndeVoceEsta
     .nextElementSibling; // terceiroFilho
+    // Remova todos os elementos filhos de paiDoPai exceto pai,
+    //elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    const nosFilhos = pai.childNodes;
+    for (let i = nosFilhos.length - 1; i >= 0; i -= 1) {
+    const currentChild = nosFilhos[index];
+    if(currentChild.id !== 'elementoOndeVoceEsta') {
+      currentChild.remove();
+      }
+    }
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove()
+
+
     </script>
 </main>
