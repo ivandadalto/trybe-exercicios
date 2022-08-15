@@ -30,3 +30,13 @@ return array;
 };
 sortOddsAndEvens();
 console.log(oddsAndEvens);
+
+// BONUS 
+
+const oddsAndEvens2 = [13, 3, 4, 10, 7, 2];
+
+const sortHof = (array) => {
+  oddsAndEvens2.sort((a, b) => a - b);
+}
+sortHof();
+console.log(oddsAndEvens2)
