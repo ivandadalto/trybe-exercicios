@@ -57,3 +57,17 @@ console.log(factorial(4))
 
 const factorial2 = number => number > 1 ? number * factorial2(number - 1) : 1;
 console.log(factorial2(4))
+
+// EX 2 :
+const longestWord = (param) => {
+  const wordArray = param.split(' ');
+  let maxLength = 0;
+  let result = "";
+  for (let i = 0; i <= wordArray.length - 1; i += 1) {
+  if (wordArray[i].length > maxLength) {
+  maxLength = wordArray[i].length
+  result = wordArray[i];}
+  }
+  return result;
+};
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'))
