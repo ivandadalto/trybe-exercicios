@@ -1,4 +1,4 @@
-const expectedResult = {
+const firstObject = {
   id: 1,
   name: 'As Crônicas de Gelo e Fogo',
   genre: 'Fantasia',
@@ -9,9 +9,6 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-function getNamedBook() {
-  return expectedResult.find((element) => element.name.length === 26)
-}
-  
+  const getNamedBook = () => firstObject.find((book) => book.name.length === 26);
 
 console.log(getNamedBook())
